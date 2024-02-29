@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <title>Mini Projects</title>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #1B1B1B;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .title1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: inline-block;
+            padding: 18px;
+            border-radius: 10px;
+            color: #FFF;
+            background-color: #1F1F1F;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .row {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin: 5px;
+        }
+}
+
+        .box {
+            width: 30%;
+            height: 120px;
+            margin-bottom: 20px;
+            /* border: 1px solid #B0B0B0; */
+            background-color: #1F1F1F;
+            display: flex;
+            color: #FFF;
+            align-items: center;
+            /* justify-content: space-between; */
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+
+        @media only screen and (max-width: 600px) {
+            .box {
+            width: 96%;
+            height: 180px;
+            margin-bottom: 20px;
+            /* border: 1px solid #B0B0B0; */
+            background-color: #1F1F1F;
+            display: flex;
+            align-items: center;
+            /* justify-content: space-between; */
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+}
+
+        .titleopen{
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-left: 20px; 
+        }
+
+
+        @media only screen and (max-width: 600px) {
+            .titleopen{
+                margin-left: 10px;
+            }
+}
+
+        .box img {
+            width: 80px;
+            height: 80px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            position: center;
+            background-color: #1F1F1F;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .box img {
+            width: 150px;
+            height: 150px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background-color: #8F8F8F;
+        }
+}
+
+        .box .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .box .date {
+            color: #8F8F8F;
+            margin-left: 5px;
+            margin-bottom: 8px;
+        }
+
+        .open-project-button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #FFF;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 5px;
+            margin-bottom: 10px;
+        }
+
+        .open-project-button:hover {
+            background-color: #555;
+        }
+
+
+        .menu {
+            height: 80px;
+            width: 100%;
+            position: fixed;
+            margin-top: 30px;
+            top: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid #000000; */
+            /* background-color: #1B1B1B; */
+            transform: translateY(-50%);
+            z-index: 9999; 
+        }
+        .menuitems {
+            height: 20%;
+            width: 60px;
+            /* background-color: #1B1B1B; */
+            border-radius: 0;
+            display: flex;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 10px;
+            font-size: 15px;
+            color: #FFF;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .menuitems:hover{
+            background-color: #4CAF50;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class = "menu">
+        <a style="text-decoration: none;" class="menuitems" href="https://the-ganeshthyadi.github.io/"> Home </a>
+        <a style="text-decoration: none;" class="menuitems" href=""> Profile </a>
+        <div class="menuitems" onclick="">Resume</div>
+
+    </div>
+    <div style="margin-top: 30px;" class="title1">Mini Projects</div>
+    
+
+
+    <div style="border: 1px solid #000000; padding: 30px;  background-color: #333; border-radius: 8px; align-items: center;" >
+
+            <p style="width: 100%; font-size: 20px; font-weight: bold; color: #FFF;">Best Mini Projects</p>
+
+            <div class="row">
+                <div class="box">
+                    <img src="Res\HackerRank.png" alt="Image 1">
+                    <div class="titleopen">
+                        <div class="title">Best Mini Project 1</div>
+                        <div class="date">Description </div>
+                        <a href="https://www.hackerrank.com/certificates/e6f97d8518b1" class="open-project-button">View</a>
+                    </div>
+                </div>
+
+                
+                <div class="box">
+                    <img src="Res\LeetCode_logo_black.png" alt="Image 1">
+                    <div class="titleopen">
+                        <div class="title">Best Mini Project 2</div>
+                        <div class="date">Description </div>
+                        <a href="https://www.hackerrank.com/certificates/5b190d9610f5" class="open-project-button">View</a>
+                    </div>
+                </div>
+
+                
+                <div class="box">
+                    <img src="Res\CodingNinjas.png" alt="Image 1">
+                    <div class="titleopen">
+                        <div class="title">Best Mini Project 3</div>
+                        <div class="date">Description </div>
+                        <a href="https://www.hackerrank.com/certificates/86f0a2069e94" class="open-project-button">View</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <p style="width: 100%; font-size: 20px; font-weight: bold; color: #FFF; margin-left: 5px; margin-top: 30px;margin-bottom: 30px;">In C</p>
+
+    <div class="row">
+        
+        <div class="box">
+            <img src="Res\c.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">Calculator</div>
+                <div class="date">Basic Calculator</div>
+                <a href="https://github.com/the-ganeshthyadi/Mini-Projects/blob/main/C/Calculator.c" class="open-project-button">View</a>
+            </div>
+        </div>
+
+        
+        <div class="box">
+            <img src="Res\c.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">Guess The Number</div>
+                <div class="date">A simple guess the number game</div>
+                <a href="https://github.com/the-ganeshthyadi/Mini-Projects/blob/main/C/Guess%20the%20number.c" class="open-project-button">View</a>
+            </div>
+        </div>
+
+        
+        <div class="box">
+            <img src="Res\c.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">Rock-Paper-Scissors</div>
+                <div class="date">A simple rock-paper-scissors game</div>
+                <a href="https://github.com/the-ganeshthyadi/Mini-Projects/blob/main/C/RockPaperScissors.c" class="open-project-button">View</a>
+            </div>
+        </div>
+        
+        
+    </div>
+    <div class="row">
+        
+        <div class="box">
+            <img src="Res\c.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">Snake and Ladder</div>
+                <div class="date">A simple snake and ladder game</div>
+                <a href="https://github.com/the-ganeshthyadi/Mini-Projects/blob/main/C/Snake%20and%20Ladder.c" class="open-project-button">View</a>
+            </div>
+        </div>
+
+        
+        <div class="box">
+            <img src="Res\c.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">Library</div>
+                <div class="date">A basic library management system</div>
+                <a href="https://github.com/the-ganeshthyadi/Mini-Projects/blob/main/C/Library.c" class="open-project-button">View</a>
+            </div>
+        </div>
+
+        
+        <div class="box">
+            <img src="Res\c.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">School Management System</div>
+                <div class="date">A basic school management system</div>
+                <a href="https://github.com/the-ganeshthyadi/Mini-Projects/blob/main/C/School.c" class="open-project-button">View</a>
+            </div>
+        </div>
+        
+        
+    </div>
+    <p style="width: 100%; font-size: 20px; font-weight: bold; color: #FFF; margin-left: 5px; margin-top: 30px;margin-bottom: 30px;">In Java</p>
+    <div class="row">
+        
+        <div class="box">
+            <img src="Res\java.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">JavaScript (Basic)</div>
+                <div class="date">HackerRank</div>
+                <a href="https://www.hackerrank.com/certificates/c4bf95af6be6" class="open-project-button">View</a>
+            </div>
+        </div>
+
+        
+        <div class="box">
+            <img src="Res\java.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">JavaScript (Intermediate)</div>
+                <div class="date">HackerRank</div>
+                <a href="https://www.hackerrank.com/certificates/00f1774b1cb6" class="open-project-button">View</a>
+            </div>
+        </div>
+
+        
+        <div class="box">
+            <img src="Res\java.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">CSS (Basic)</div>
+                <div class="date">HackerRank</div>
+                <a href="https://www.hackerrank.com/certificates/a0ab1834a3c8" class="open-project-button">View</a>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <div class="row">
+        
+        <div class="box">
+            <img src="Res\java.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">JavaScript (Basic)</div>
+                <div class="date">HackerRank</div>
+                <a href="https://www.hackerrank.com/certificates/c4bf95af6be6" class="open-project-button">View</a>
+            </div>
+        </div>
+
+        
+        <div class="box">
+            <img src="Res\java.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">JavaScript (Intermediate)</div>
+                <div class="date">HackerRank</div>
+                <a href="https://www.hackerrank.com/certificates/00f1774b1cb6" class="open-project-button">View</a>
+            </div>
+        </div>
+
+        
+        <div class="box">
+            <img src="Res\java.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">CSS (Basic)</div>
+                <div class="date">HackerRank</div>
+                <a href="https://www.hackerrank.com/certificates/a0ab1834a3c8" class="open-project-button">View</a>
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+    <p style="width: 100%; font-size: 20px; font-weight: bold; color: #FFF; margin-left: 5px; margin-top: 30px;margin-bottom: 30px;">In Python</p>
+    <div class="row">
+        
+        <div class="box">
+            <img src="Res/python.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">Accomplishment</div>
+                <div class="date">Date 1</div>
+                <a href="#" class="open-project-button">View</a>
+            </div>
+        </div>
+
+        
+        <div class="box">
+            <img src="Res/python.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">Accomplishment</div>
+                <div class="date">Date 1</div>
+                <a href="#" class="open-project-button">View</a>
+            </div>
+        </div>
+
+        
+        <div class="box">
+            <img src="Res/python.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">Accomplishment</div>
+                <div class="date">Date 1</div>
+                <a href="#" class="open-project-button">View</a>
+            </div>
+        </div>
+        
+        
+    </div>
+    <div class="row">
+        
+        <div class="box">
+            <img src="Res/python.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">Accomplishment</div>
+                <div class="date">Date 1</div>
+                <a href="#" class="open-project-button">View</a>
+            </div>
+        </div>
+
+        
+        <div class="box">
+            <img src="Res/python.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">Accomplishment</div>
+                <div class="date">Date 1</div>
+                <a href="#" class="open-project-button">View</a>
+            </div>
+        </div>
+
+        
+        <div class="box">
+            <img src="Res/python.png" alt="Image 1">
+            <div class="titleopen">
+                <div class="title">Accomplishment</div>
+                <div class="date">Date 1</div>
+                <a href="#" class="open-project-button">View</a>
+            </div>
+        </div>
+        
+        
+    </div>
+    
+
+</body>
+</html>

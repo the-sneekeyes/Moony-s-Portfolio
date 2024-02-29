@@ -1,0 +1,19 @@
+.dots {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 9999; /* Increase the z-index to ensure dots are on top */
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #ffffff6e;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.active {
+  background-color: #ffffff;
+}

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+    
+        /* Add your CSS styles here */
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            /* font-family: 'Lexend', sans-serif; */
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            overflow: hidden;
+        }
+        .block {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.5s;
+        }
+
+
+        .block .cat {
+            position: absolute;
+            top: 29.5%;
+            left: 18.5%;
+            font-size: 1.5em;
+            color: rgb(236, 235, 235);
+            text-align: left;
+        }
+
+
+        .block .title {
+            position: absolute;
+            top: 30%;
+            left: 18%;
+            font-size: 8em;
+            color: white;
+            text-align: left;
+            word-break: break-all;
+        }
+
+
+        .block .description {
+            position: absolute;
+            top: 53%;
+            left: 18.5%;
+            color: white;
+            text-align: left;
+        }
+
+
+        .block .button {
+            position: absolute;
+            top: 70%;
+            left: 18.5%;
+            background-color: #FFF;
+            padding: 8px 16px;
+            border: none;
+            display: inline-block;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .button:hover{
+            background-color: rgb(211, 211, 211);
+        }
+
+            /* Adjusted dot styles */
+        .dots {
+            height: 100%;
+            width: 80px;
+            position: fixed;
+            top: 50%;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid #000000;
+            background-color: #1B1B1B; */
+            transform: translateY(-50%);
+            z-index: 9999; /* Increase the z-index to ensure dots are on top */
+        }
+
+        .dot {
+            height: 20%;
+            width: 60px;
+            background-color: transparent;
+            border-radius: 0;
+            display: flex;
+            /* margin-top: 5px;
+            margin-bottom: 5px; */
+            padding: 10px;
+            font-size: 15px;
+            color: #FFF;
+            writing-mode: vertical-rl;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(180deg);
+            cursor: pointer;
+        }
+
+        .dot.active{
+            background-color: #252525;
+            border-radius: 0px 20px 20px 0;
+        }
+
+        .dot:hover{
+            background-color: #4CAF50;
+            border-radius: 0px 20px 20px 0;
+        }
+        
+
+        .menu {
+            height: 80px;
+            width: 100%;
+            position: fixed;
+            margin-top: 30px;
+            top: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid #000000; */
+            /* background-color: #1B1B1B; */
+            transform: translateY(-50%);
+            z-index: 9999; 
+        }
+        .menuitems {
+            height: 20%;
+            width: 60px;
+            /* background-color: #1B1B1B; */
+            border-radius: 0;
+            display: flex;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 10px;
+            font-size: 15px;
+            color: #FFF;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            }
+            .menuitems:hover{
+                background-color: #4CAF50;
+                border-radius: 8px;
+            }
+
+            .active {
+                background-color: #252525;
+            }
+
+    </style>
+
+
+<style>
+
+    .container2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image2 {
+        width: 400px;
+        height: 500px;
+        margin-right: 40px;
+        overflow: hidden;
+    }
+
+    .image2 img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .content2 {
+        padding: 20px;
+        
+    }
+
+    .title2 {
+        font-size: 38px;
+        font-weight: bold;
+        color: #FFF;
+        margin-bottom: 10px;
+    }
+
+    .subtitle2 {
+        font-size: 24px;
+        color: #bfbfbf;
+        /* font-style: italic; */
+        margin-bottom: 10px;
+    }
+
+    .description2 {
+        width: 500px;
+        height: auto;
+        font-size: 18px;
+        color: #7e7e7e;
+        background-color: #1F1F1F;
+        padding: 10px 10px;
+        border-radius: 10px;
+        font-weight: 100;
+        margin-top: 20px;
+        /* border: 1px solid #ccc; */
+        /* padding: 20px; */
+        overflow: auto;
+    }
+
+
+
+
+    .container3 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center;
+            justify-content: center; */
+            /* background-color: #7e7e7e; */
+        }
+
+    .skill-container3 {
+            width: 400px;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            padding: 20px;
+            margin-top: 1%;
+        }
+
+        .skill-label {
+            flex: 1;
+            text-align: right;
+            color: #bfbfbf;
+            padding-right: 10px;
+        }
+
+        .progress-bar {
+            flex: 2;
+            height: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #4CAF50;
+        }
+
+
+
+        section2 {
+      /* width: auto;
+      height: auto; */
+      /* border: 1px solid #ccc; */
+      padding: 20px;
+      color: #FFF;
+      border-radius: 10px;
+      /* background-color: #7e7e7e; */
+    }
+
+        ul {
+      list-style: none;
+      padding: 0;
+      background-color: #1F1F1F;
+      border-radius: 10px;
+      padding: 10px;
+      max-height: 300px; /* Adjust the max-height as needed */
+      overflow-y: auto;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    button3 {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    
+    section4 {
+        margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+    .experience-item {
+        border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px;
+            cursor: pointer;
+            background-color: #1F1F1F;
+            transition: background-color 0.3s;
+    }
+    .experience-item:hover {
+            background-color: #2a2a2a;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #888;
+        }
+
+
+        .myButton {
+            display: inline-block;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .myButton:hover{
+            background-color: #ffffff;
+        }
+        .myButton img {
+            max-width: 50px;
+            max-height: 50px;
+            margin-right: 10px;
+        }
+
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+    <div class = "menu">
+        <div class="menuitems" onclick="scrollToBlock(0)">Home</div>
+        <div class="menuitems" onclick="">Profile</div>
+        <div class="menuitems" onclick="">Resume</div>
+
+    </div>
+    <div class="dots">
+        <span style="margin-top: 8px;" class="dot" onclick="scrollToBlock(0)"> Home</span>
+        <span class="dot" onclick="scrollToBlock(1)"> About Me </span>
+        <span class="dot" onclick="scrollToBlock(2)"> Skills </span>
+        <span class="dot" onclick="scrollToBlock(3)">Projects & Achievements   </span>
+        <span class="dot" onclick="scrollToBlock(4)"> Work Experience </span>
+        <span class="dot" onclick="scrollToBlock(5)"> Contact </span>
+    </div>
+
+
+    <div class="desktop-container">
+
+        <div class="block" style="background-color: #1B1B1B; background-image: url(background.png); background-size: cover; background-position: center center;" onwheel="scrollHandler(event)">
+            <div style="font-size: 50px;" class="cat">Developer</div>
+            <div style="margin-top: 36px;" class="title">Ronalyn Grace <br> Gatal</div>
+        </div>
+
+        <div class="block" style=" display: flex; align-items: center; justify-content: center; background-color: #1B1B1B;  background-size: cover; background-position: center center;" onwheel="scrollHandler(event)">
+            <div class="container2">
+                <div class="image2">
+                    <img src="babe.jpg" alt="Your Image Alt Text">
+                </div>
+        
+                <div class="content2">
+                    <div class="title2">Ronalyn Grace A. Gatal</div>
+                    <div class="subtitle2">I'm a Developer</div>
+                    <div class="description2">As a passionate software development student, I possess a solid understanding of
+                         Java, Python, and JavaScript, backed by practical experience in web development.
+                         Proficient in Git and versed in the software development life cycle,
+                         I bring adaptability and problem-solving skills to collaborative projects.
+                         Actively seeking opportunities for internships or entry-level positions to
+                         apply my academic knowledge and contribute meaningfully to the evolving field of software development.</div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="block" style="background-color: #1B1B1B; background-size: cover; background-position: center center;" onwheel="scrollHandler(event)">
+            <div class="container3">
+                <h1 style="margin-top: 5%; margin-left: 2%; color: #FFF;">Skills</h1>
+                <div style="margin-top: 0%; margin-left: 2%; width: 90%; height: auto; padding: 10px; background-color: #1F1F1F; border-radius: 10px;">
+                    <p style="padding: 10px; color: #7e7e7e;">
+                        As a software developer student, I possess a solid foundation in programming languages such as Java,
+                        Python, and JavaScript, with hands-on experience in web development using HTML5, CSS3, React.js, and
+                        Node.js. Proficient in MySQL and MongoDB for database management, I am well-versed in Git for version control.
+                        My problem-solving skills extend to debugging and troubleshooting, and I have a good understanding of the Software Development
+                        Life Cycle (SDLC). With effective communication and collaboration skills, I am committed to continuous learning, staying updated
+                            with the latest technologies and contributing to innovative projects.</p>
+                </div>
+                
+                
+                <div style="display: flex; align-items: center; justify-content: start;  margin-top: 2%;">
+
+                    <div style="display: flex; flex-direction: row;">
+                        <div>
+                            <div class="skill-container3">
+                                <div class="skill-label">Java:</div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                    
+            
+                            <div class="skill-container3">
+                                <div class="skill-label">C:</div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 50%;"></div>
+                                </div>
+                            </div>
+        
+                            <div class="skill-container3">
+                                <div class="skill-label">HTML:</div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 50%;"></div>
+                                </div>
+                            </div>
+        
+                            <div class="skill-container3">
+                                <div class="skill-label">CSS:</div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div>
+                            <div class="skill-container3">
+                                <div class="skill-label">JavaScript:</div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                    
+            
+                            <div class="skill-container3">
+                                <div class="skill-label">C#:</div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 50%;"></div>
+                                </div>
+                            </div>
+        
+                            <!-- <div class="skill-container3">
+                                <div class="skill-label">Skill 2:</div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 50%;"></div>
+                                </div>
+                            </div>
+        
+                            <div class="skill-container3">
+                                <div class="skill-label">Skill 2:</div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 50%;"></div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="block" style="background-color: #1B1B1B; background-size: cover; background-position: center center; display: flex; align-items: center; justify-content: center;" onwheel="scrollHandler(event)">
+            
+            <div style="width: 100%; height: 100%;">
+                <div style="display: flex; justify-content: space-around; padding: 20px;">
+                    <section2 style=" width: 50%; height: 80%; margin-left: 3%; margin-right: 2%; margin-top:5%;">
+                        <h2>Projects</h2>
+                        <div style="width: 100%; height: auto; background-color: #1F1F1F; border-radius: 10px;">
+                            <p style=" padding: 10px;">Welcome to my software developer portfolio, where innovation meets functionality!
+                                I'm passionate about crafting robust and scalable software solutions that address real-world challenges.
+                                Below are some of my notable projects that showcase my skills and expertise.</p>
+                        </div>
+                        <ul>
+                          <li>
+                            <h3>Item 1</h3>
+                            <p>Description for Item 1</p>
+                            <button3>Open</button3>
+                          </li>
+                          <li>
+                            <h3>Item 2</h3>
+                            <p>Description for Item 2</p>
+                            <button3>Open</button3>
+                          </li>
+                          
+                        </ul>
+                      </section2>
+                    
+                      <section2 style=" width: 50%; height: 80%; margin-left: 2%; margin-right: 5%; margin-top: 5%;">
+                        <h2>Achievements</h2>
+                        <div style="width: 100%; height: auto; background-color: #1F1F1F; border-radius: 10px;">
+                            <p style=" padding: 10px;">Throughout my career as a software developer, I have consistently
+                                demonstrated a passion for innovative solutions and a commitment to excellence. My achievements
+                                span various projects, showcasing my technical skills, leadership, and dedication to delivering
+                                high-quality software solutions.</p>
+                        </div>
+                        <ul>
+                          
+                          <li>
+                            <h3>Item A</h3>
+                            <p>Description for Item A</p>
+                            <button3>Open</button3>
+                          </li>
+                          <li>
+                            <h3>Item B</h3>
+                            <p>Description for Item B</p>
+                            <button3>Open</button3>
+                          </li>
+                          <li>
+                            <h3>Item B</h3>
+                            <p>Description for Item B</p>
+                            <button3>Open</button3>
+                          </li>
+                          <li>
+                            <h3>Item B</h3>
+                            <p>Description for Item B</p>
+                            <button3>Open</button3>
+                          </li>
+                          <li>
+                            <h3>Item B</h3>
+                            <p>Description for Item B</p>
+                            <button3>Open</button3>
+                          </li>
+                          
+                          
+                        </ul>
+                      </section2>
+                </div>
+            </div>
+
+
+        </div>
+        
+
+        <div class="block" style="background-color: #1B1B1B; background-size: cover; background-position: center center;" onwheel="scrollHandler(event)">
+           
+            <div style="display: flex; flex-direction: column; align-items: start; justify-content: start; margin-left: 2%; margin-top: 3%;">
+                <h1 style="color: #fff;">Work Experience</h1>
+                <div style="margin-top: 0%; margin-left: 2%; width: 90%; height: auto; padding: 10px; background-color: #1F1F1F; border-radius: 10px;">
+                    <p style="padding: 10px; color: #7e7e7e;">
+                        As a software developer student, I possess a solid foundation in programming languages such as Java,
+                        Python, and JavaScript, with hands-on experience in web development using HTML5, CSS3, React.js, and
+                        Node.js. Proficient in MySQL and MongoDB for database management, I am well-versed in Git for version control.
+                        My problem-solving skills extend to debugging and troubleshooting, and I have a good understanding of the Software Development
+                        Life Cycle (SDLC). With effective communication and collaboration skills, I am committed to continuous learning, staying updated
+                            with the latest technologies and contributing to innovative projects.</p>
+                </div>
+                
+                <section4 style="display: flex; flex-direction: row; color: #fff; margin-left: 1.5%; margin-top: 1%;">
+                    
+
+                    <div>
+                        <div class="experience-item" onclick="showPopup('Internship at XYZ Company', 'Web Developer Intern', 'June 2023 - August 2023', 'Worked on developing and maintaining web applications, collaborated with the team to solve coding issues, and gained hands-on experience in front-end and back-end development.');">
+                            <h2>Internship at XYZ1 Company</h2>
+                            <p style="color: #bfbfbf;"><strong>Position:</strong> Web Developer Intern</p>
+                            <p style="color: #bfbfbf;"><strong>Duration:</strong> June 2023 - August 2023</p>
+                        </div>
+                
+                        <div class="experience-item" onclick="showPopup('Part-time Job at ABC Store', 'Sales Associate', 'September 2022 - May 2023', 'Assisted customers, managed inventory, and handled cash transactions. Developed strong communication and teamwork skills in a retail environment.');">
+                            <h2>Part-time Job at ABC Store</h2>
+                            <p style="color: #bfbfbf;"><strong>Position:</strong> Sales Associate</p>
+                            <p style="color: #bfbfbf;"><strong>Duration:</strong> September 2022 - May 2023</p>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <div class="experience-item" onclick="showPopup('Internship at XYZ Company', 'Web Developer Intern', 'June 2023 - August 2023', 'Worked on developing and maintaining web applications, collaborated with the team to solve coding issues, and gained hands-on experience in front-end and back-end development.');">
+                            <h2>Internship at XYZ Company</h2>
+                            <p style="color: #bfbfbf;"><strong>Position:</strong> Web Developer Intern</p>
+                            <p style="color: #bfbfbf;"><strong>Duration:</strong> June 2023 - August 2023</p>
+                        </div>
+                
+                        <div class="experience-item" onclick="showPopup('Part-time Job at ABC Store', 'Sales Associate', 'September 2022 - May 2023', 'Assisted customers, managed inventory, and handled cash transactions. Developed strong communication and teamwork skills in a retail environment.');">
+                            <h2>Part-time Job at ABC Store</h2>
+                            <p style="color: #bfbfbf;"><strong>Position:</strong> Sales Associate</p>
+                            <p style="color: #bfbfbf;"><strong>Duration:</strong> September 2022 - May 2023</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="experience-item" onclick="showPopup('Internship at XYZ Company', 'Web Developer Intern', 'June 2023 - August 2023', 'Worked on developing and maintaining web applications, collaborated with the team to solve coding issues, and gained hands-on experience in front-end and back-end development.');">
+                            <h2>Internship at XYZ Company</h2>
+                            <p style="color: #bfbfbf;"><strong>Position:</strong> Web Developer Intern</p>
+                            <p style="color: #bfbfbf;"><strong>Duration:</strong> June 2023 - August 2023</p>
+                        </div>
+                
+                        <div class="experience-item" onclick="showPopup('Part-time Job at ABC Store', 'Sales Associate', 'September 2022 - May 2023', 'Assisted customers, managed inventory, and handled cash transactions. Developed strong communication and teamwork skills in a retail environment.');">
+                            <h2>Part-time Job at ABC Store</h2>
+                            <p style="color: #bfbfbf;"><strong>Position:</strong> Sales Associate</p>
+                            <p style="color: #bfbfbf;"><strong>Duration:</strong> September 2022 - May 2023</p>
+                        </div>
+                    </div>
+                    
+
+                </section4>
+            </div>
+
+            <div class="overlay" onclick="closePopup()"></div>
+            <div id="popup" class="popup">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h2 id="popupTitle"></h2>
+                <p id="popupPosition"></p>
+                <p id="popupDuration"></p>
+                <p id="popupDescription"></p>
+            </div>
+           
+
+        </div>
+
+        
+        <div class="block" style="background-color: #1B1B1B; background-size: cover; background-position: center center; display: flex; flex-direction: column;" onwheel="scrollHandler(event)">
+            
+            <h1 style="color: #fff; margin-left: 2%; margin-top: 5%;">Contact</h1>
+            <div style="color: #fff; margin-left: 4%; margin-top: 2%;">
+                <button style="width: auto; display: flex; flex-direction: row; background-color: #1F1F1F; border-radius: 10px;" class="myButton" id="myButton" onclick= "openLink('https://www.instagram.com/ronalynamoyo?igsh=MWx3a3hvZjlsOHp2bw==')">
+                    <img src="Res\Logos\instagram.png" alt="Example Icon">
+                    <p style="font-weight: bold; color: #fff; padding: 10px;">Ronalynamoyo</p>
+                </button>
+            </div>
+            <div style="color: #fff; margin-left: 4%; margin-top: 2%;">
+                <button style="width: auto; display: flex; flex-direction: row; background-color: #1F1F1F; border-radius: 10px;" class="myButton" id="myButton" onclick="openLink('https://www.facebook.com/r.RonalynGrace')">
+                    <img src="Res\Logos\facebook.png" alt="Example Icon">
+                    <p style="font-weight: bold; color: #fff; padding: 10px;">Ronalyn Grace Gatal</p>
+                </button>
+            </div>
+            <div style="color: #fff; margin-left: 4%; margin-top: 2%;">
+                <button style="width: auto; display: flex; flex-direction: row; background-color: #1F1F1F; border-radius: 10px;" class="myButton" id="myButton" onclick="openLink('https://ph.linkedin.com/in/ronalyn-grace-gatal-703b0b1b7')">
+                    <img src="Res\Logos\linkedin.png" alt="Example Icon">
+                    <p style="font-weight: bold; color: #fff; padding: 10px;">Ronalyn Grace Gatal</p>
+                </button>
+            </div>
+            
+
+        </div>
+
+
+    <script>
+
+
+        if (window.innerWidth <= 800) {
+                    window.location.href = 'mobilever.html';
+                }
+
+
+        function scrollHandler(event) {
+            let currentY;
+
+            if (event.type === 'wheel') {
+                currentY = event.deltaY;
+            } else if (event.type === 'touchmove') {
+                currentY = event.touches[0].clientY;
+            }
+
+            const deltaThreshold = 50; // Adjust this threshold as needed
+
+            if (Math.abs(currentY) >= deltaThreshold) {
+                const delta = currentY > 0 ? -1 : 1;
+                const blocks = document.querySelectorAll('.block');
+                const currentBlock = Math.round(window.scrollY / window.innerHeight);
+                const nextBlock = currentBlock + delta;
+                const blockCount = blocks.length;
+
+                if (nextBlock >= 0 && nextBlock < blockCount) {
+                    event.preventDefault();
+                    blocks[nextBlock].scrollIntoView({ behavior: 'smooth' });
+                    setActiveDot(nextBlock);
+                }
+            }
+        }
+
+        function setActiveDot(index) {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function scrollToBlock(index) {
+            const blocks = document.querySelectorAll('.block');
+            blocks[index].scrollIntoView({ behavior: 'smooth' });
+            setActiveDot(index);
+        }
+    </script>
+
+    <script>
+    let touchStartY = 0;
+    let touchEndY = 0;
+
+    document.addEventListener('touchstart', (event) => {
+        touchStartY = event.touches[0].clientY;
+    });
+
+    document.addEventListener('touchmove', (event) => {
+        touchEndY = event.touches[0].clientY;
+    });
+
+    document.addEventListener('touchend', () => {
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const deltaY = touchEndY - touchStartY;
+        const deltaThreshold = 50; // Adjust this threshold as needed
+
+        if (Math.abs(deltaY) >= deltaThreshold) {
+            const delta = deltaY > 0 ? -1 : 1;
+            const blocks = document.querySelectorAll('.block');
+            const currentBlock = Math.round(window.scrollY / window.innerHeight);
+            let nextBlock = currentBlock - delta;
+
+            if (nextBlock >= 0 && nextBlock < blocks.length) {
+                blocks[nextBlock].scrollIntoView({ behavior: 'smooth' });
+                setActiveDot(nextBlock);
+            } else {
+                if (delta === -1) {
+                    blocks[0].scrollIntoView({ behavior: 'smooth' });
+                    setActiveDot(0);
+                } else {
+                    blocks[blocks.length - 1].scrollIntoView({ behavior: 'smooth' });
+                    setActiveDot(blocks.length - 1);
+                }
+            }
+        }
+    }
+</script>
+
+<script>
+    function showPopup(title, position, duration, description) {
+        document.getElementById('popupTitle').innerText = title;
+        document.getElementById('popupPosition').innerText = 'Position: ' + position;
+        document.getElementById('popupDuration').innerText = 'Duration: ' + duration;
+        document.getElementById('popupDescription').innerText = 'Description: ' + description;
+        document.querySelector('.overlay').style.display = 'block';
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.querySelector('.overlay').style.display = 'none';
+        document.getElementById('popup').style.display = 'none';
+    }
+
+
+    function openLink(url) {
+        
+        window.open(url, '_blank');
+    }
+</script>
+
+</body>
+</html>

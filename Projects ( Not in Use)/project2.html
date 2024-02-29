@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: 'Lexend', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(150, 150, 150);
+        }
+
+
+        .title{
+            color: #333;
+            font-weight: bold;
+            font-size: 25px;
+            margin: 10px;
+        }
+
+        /* Container for the layout */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+        }
+
+
+        .logodesc {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Vertically center items */
+        }
+        .logo {
+            flex: 0 0 auto; /* Prevent the logo from stretching */
+            margin-right: 20px; /* Adjust spacing between logo and description */
+        }
+        .description {
+            flex: 1; /* Allow description to take remaining space */
+        }
+
+        .descopen {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: flex-start; */
+            align-items: flex-end;
+            /* flex: 1; */
+        }
+
+
+        /* First section */
+        .section-1 {
+            /* left: 0%; */
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #FFF;
+            border-radius: 5px;
+        }
+
+        /* Second section */
+        .section-2 {
+            width: 30%;
+            
+            /* flex: 1; */
+            margin: 20px;
+            margin-left: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #FFF;
+            border-radius: 5px;
+        }
+
+        /* Third section */
+        .section-3 {
+            width: 94%;
+            /* height: 100%; */
+            /* flex: 1; */
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #FFF;
+            border-radius: 5px;
+        }
+
+        /* Images in section 2 */
+        .image-box {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            background-color: #ccc;
+        }
+
+        .image-box img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        /* Images in section 3 */
+        .section-3 img {
+            display: block;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .open-project-button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #FFF;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .open-project-button:hover {
+            background-color: #555;
+        }
+        
+        .features{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .feature{
+            width: auto;
+            height: 30px;
+            margin: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: flex;
+            background-color: #333;
+            color: #FFF;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+
+        .screenshoot{
+            margin: 10px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <div>
+
+        <div class="container">
+            <!-- Section 1 -->
+            <div class="section-1">
+                <div class="title">Project Title</div>
+        
+                <div class="logodesc">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <img src="images (1).jpeg" alt="Project Logo">
+                    </div>
+                
+                    <div class="descopen">
+                        
+                        <a href="#" class="open-project-button">Open Project</a>
+                        
+                
+                        <div class="description">
+                            This section features my big project—an online store like Amazon but with a dashboard.<br>
+                            It's my way of showing how I create complex websites with extra features. This project<br>
+                            demonstrates my skills in web design and making user-friendly interfaces. It's proof<br>
+                            of my dedication to building websites that work well and look good.
+                            
+                        </div>
+
+                        <div class="features">
+                            <div class="feature">feature1feature1</div>
+                            <div class="feature">feature2feature1feature1</div>
+                            <div class="feature">feature3</div>
+                            <div class="feature">feature4</div>
+                            <div class="feature">feature5</div>
+                            <!-- <div class="feature">feature6</div> -->
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="section-2">
+            <h2>Skills and Tools</h2>
+            <!-- Skills and Tools content -->
+            <div style="display: flex; flex-direction: row; ">
+            <div style="margin: 10px;" class="skills-tools">
+                <!-- 10 boxes -->
+                <div class="image-box">
+                    <img src="image1.jpg" alt="Image 1">
+                    <p>Text 1</p>
+                </div>
+                <div class="image-box">
+                    <img src="image1.jpg" alt="Image 1">
+                    <p>Text 1</p>
+                </div>
+                <div class="image-box">
+                    <img src="image1.jpg" alt="Image 1">
+                    <p>Text 1</p>
+                </div>
+                
+                <!-- Repeat this structure for additional boxes -->
+            </div>
+            <div style="margin: 10px;" class="skills-tools">
+                <!-- 10 boxes -->
+                <div class="image-box">
+                    <img src="image1.jpg" alt="Image 1">
+                    <p>Text 1</p>
+                </div>
+                <div class="image-box">
+                    <img src="image1.jpg" alt="Image 1">
+                    <p>Text 1</p>
+                </div>
+                <div class="image-box">
+                    <img src="image1.jpg" alt="Image 1">
+                    <p>Text 1</p>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+    <div class="section-3">
+        <h2>Screenshots</h2>
+
+            <div style="display: flex; flex-direction: row;">
+            <!-- Images in section 3 -->
+                <img class="screenshoot" src="screenshot1.jpg" alt="Screenshot 1">
+                <img class="screenshoot" src="screenshot2.jpg" alt="Screenshot 2">
+                <img class="screenshoot" src="screenshot2.jpg" alt="Screenshot 3">
+                <img class="screenshoot" src="screenshot2.jpg" alt="Screenshot 4">
+                <img class="screenshoot" src="screenshot2.jpg" alt="Screenshot 5">
+                <img class="screenshoot" src="screenshot2.jpg" alt="Screenshot 6">
+        </div>
+    </div>
+
+</body>
+</html>
