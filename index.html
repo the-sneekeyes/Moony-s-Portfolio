@@ -145,6 +145,8 @@
             /* background-color: #1B1B1B; */
             border-radius: 0;
             display: flex;
+            margin-left: 3px;
+            margin-right: 3px;
             margin-top: 5px;
             margin-bottom: 5px;
             padding: 10px;
@@ -382,8 +384,8 @@
 
 
     <div class = "menu">
-        <div class="menuitems" onclick="scrollToBlock(0)">Home</div>
-        <div class="menuitems" onclick="">Profile</div>
+        <div class="menuitems" style="background-color: #4CAF50; border-radius: 8px; " onclick="scrollToBlock(0)">Home</div>
+        <div class="menuitems" onclick="openLink('profile.html')">Profile</div>
         <div class="menuitems" onclick="">Resume</div>
 
     </div>
@@ -799,7 +801,7 @@
 
     function openLink(url) {
         
-        window.open(url, '_blank');
+        window.location.href = url;
     }
 </script>
 

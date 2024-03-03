@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
+    <style>
+    
+        /* Add your CSS styles here */
+        body {
+            font-family: 'Lexend', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            overflow: hidden;
+        }
+        .block {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.5s;
+        }
+        
+
+        .menu {
+            height: 80px;
+            width: 100%;
+            position: fixed;
+            margin-top: 30px;
+            top: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid #000000; */
+            /* background-color: #1B1B1B; */
+            transform: translateY(-50%);
+            z-index: 9999; 
+        }
+        .menuitems {
+            height: 20%;
+            width: 60px;
+            /* background-color: #1B1B1B; */
+            border-radius: 0;
+            display: flex;
+            margin-left: 3px;
+            margin-right: 3px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 10px;
+            font-size: 15px;
+            color: #FFF;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            }
+            .menuitems:hover{
+                background-color: #4CAF50;
+                border-radius: 8px;
+            }
+
+            .active {
+                background-color: #252525;
+            }
+
+
+
+
+            .container2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image2 {
+        width: 400px;
+        height: 500px;
+        margin-right: 40px;
+        overflow: hidden;
+    }
+
+    .image2 img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .content2 {
+        padding: 20px;
+        
+    }
+
+    .title2 {
+        font-size: 38px;
+        font-weight: bold;
+        color: #FFF;
+        margin-bottom: 10px;
+    }
+
+    .subtitle2 {
+        font-size: 24px;
+        color: #bfbfbf;
+        /* font-style: italic; */
+        margin-bottom: 10px;
+    }
+
+    .description2 {
+        width: 500px;
+        height: auto;
+        font-size: 18px;
+        color: #7e7e7e;
+        background-color: #1F1F1F;
+        padding: 10px 10px;
+        border-radius: 10px;
+        font-weight: 100;
+        margin-top: 10px;
+        /* border: 1px solid #ccc; */
+        /* padding: 20px; */
+        overflow: auto;
+    }
+
+    .description{
+        
+        height: auto;
+        /* font-size: 18px; */
+        /* color: #7e7e7e; */
+        background-color: #1F1F1F;
+        padding: 10px 10px;
+        border-radius: 10px;
+        /* font-weight: 100; */
+        /* margin-top: 10px; */
+        /* border: 1px solid #ccc; */
+        overflow: auto;
+    }
+
+
+    button3 {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      text-align: center;
+      margin-top: 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    button3:hover{
+        background-color: #36ad38;
+    }
+
+
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .box{
+        width: 20%;
+        height: 270px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #1F1F1F;
+    }
+
+    .box1{
+        width: 24%;
+        height: 400px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #1F1F1F;
+    }
+
+    .line{
+        width: 2px;
+        height: 280px;
+        background-color: #FFF;
+        margin-left: 50px;
+    }
+
+
+    .navdown{
+        display: flex;
+        left: 1;
+        bottom: 1;
+    }
+
+    </style>
+
+</head>
+<body>
+    <!-- Your mobile content -->
+    <div class="mobile-container">
+        
+
+        <div class = "menu">
+            <div class="menuitems"  onclick="openLink('index.html')">Home</div>
+            <div class="menuitems" style="background-color: #4CAF50; border-radius: 8px;" onclick="">Profile</div>
+            <div class="menuitems" onclick="">Resume</div>
+    
+        </div>
+        <!-- <div class="dots">
+            <span style="margin-top: 8px;" class="dot" onclick="scrollToBlock(0)"> </span>
+            <span class="dot" onclick="scrollToBlock(1)">  </span>
+            <span class="dot" onclick="scrollToBlock(2)">  </span>
+            <span class="dot" onclick="scrollToBlock(3)">  </span>
+            <span class="dot" onclick="scrollToBlock(4)">  </span>
+            <span class="dot" onclick="scrollToBlock(5)">  </span>
+        </div> -->
+    
+    
+        <div class="desktop-container">
+    
+            <div class="block" style=" display: flex; align-items: center; justify-content: center; background-color: #1B1B1B;  background-size: cover; background-position: center center;" onwheel="scrollHandler(event)">
+                <div class="container2">
+                    <div class="image2">
+                        <img src="babe.jpg" alt="Your Image Alt Text">
+                    </div>
+            
+                    <div style="display: flex; flex-direction: column;" class="content2">
+                        <div class="title2">About Me</div>
+                        <!-- <div class="subtitle2">I'm a Developer</div> -->
+                        <div class="description2">As a passionate software development student, I possess a solid understanding of
+                             Java, Python, and JavaScript, backed by practical experience in web development.
+                             Proficient in Git and versed in the software development life cycle,
+                             I bring adaptability and problem-solving skills to collaborative projects.</div>
+                             <div style="display: flex; flex-direction: row; align-items: center; justify-content: left;" >
+
+
+                                <div style="margin-top: -5%;">
+                                    <p style="font-size: 50px; margin-bottom: 8%; color: #FFF;">8+</p>
+                                    <div style="width: auto; color: #7e7e7e; background-color: #1F1F1F; border-radius: 10px; padding: 10px;" >
+                                        <p> Total Years of<br> Experience</p>
+                                    </div >
+                                </div>
+
+                                <div style="margin-top: -5%; margin-left: 40px;">
+                                    <p style="font-size: 50px; margin-bottom: 8%; color: #FFF;">20+</p>
+                                    <div style="width: auto; color: #7e7e7e; border-radius: 10px; background-color: #1F1F1F; padding: 10px;" >
+                                        <p> Servies Offered <br> Over Years</p>
+                                    </div >
+                                </div>
+
+                                <div style="margin-top: -5%; margin-left: 40px;">
+                                    <p style="font-size: 50px; margin-bottom: 8%; color: #FFF;">10+</p>
+                                    <div style="width: auto; color: #7e7e7e; border-radius: 10px; background-color: #1F1F1F; padding: 10px;" >
+                                        <p> Testimonials <br> From My Customers</p>
+                                    </div >
+                                </div>
+                             </div>
+                             <button3 style="width: 20%;">Open Resume</button3>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="block" style="background-color: #1B1B1B; background-image: url(background_datafluence.png); background-size: cover; background-position: center center;" onwheel="scrollHandler(event)">
+
+                <div style="width: 100%; height: 100%;">
+                    <div style="margin-left: 2%; margin-top: 4%; color: #FFF;">
+                        <h1>Services</h1>    
+                    </div>
+                    <div class="container">
+                        <div style="margin-left: 5%;" class="box">
+                                <div style="margin-left: 4%; display: flex; align-items: left;" class="title">
+                                    <p style="font-size: 20px;text-align: left; color: #bfbfbf;">Title</p>
+                                </div>
+                                <div style="width: 94%; height: 70%; margin: 10px; background-color: #343434; border-radius: 10px;" >
+                                    <p style="padding: 10px; color: #7e7e7e;">Description</p>
+                                </div>
+                        </div>
+
+                        <div style="margin-left: 1.5%;" class="box">
+                            <div style="margin-left: 4%; display: flex; align-items: left;" class="title">
+                                <p style="font-size: 20px;text-align: left; color: #bfbfbf;">Title</p>
+                            </div>
+                            <div style="width: 94%; height: 70%; margin: 10px; background-color: #343434; border-radius: 10px;" >
+                                <p style="padding: 10px; color: #7e7e7e;">Description</p>
+                            </div>  
+                        </div>
+
+                        <div style="margin-left: 1.5%;" class="box">
+                                                               <div style="margin-left: 4%; display: flex; align-items: left;" class="title">
+                                    <p style="font-size: 20px;text-align: left; color: #bfbfbf;">Title</p>
+                                </div>
+                                <div style="width: 94%; height: 70%; margin: 10px; background-color: #343434; border-radius: 10px;" >
+                                    <p style="padding: 10px; color: #7e7e7e;">Description</p>
+                                </div> 
+                        </div>
+
+                        <div style="margin-left: 1.5%; margin-right: 5%;" class="box">
+                                                              <div style="margin-left: 4%; display: flex; align-items: left;" class="title">
+                                    <p style="font-size: 20px;text-align: left; color: #bfbfbf;">Title</p>
+                                </div>
+                                <div style="width: 94%; height: 70%; margin: 10px; background-color: #343434; border-radius: 10px;" >
+                                    <p style="padding: 10px; color: #7e7e7e;">Description</p>
+                                </div>  
+                        </div>
+
+                    </div>
+
+                    <div style="margin-top: 20px;" class="container">
+                        <div style="margin-left: 5%;" class="box">
+                                                                <div style="margin-left: 4%; display: flex; align-items: left;" class="title">
+                                    <p style="font-size: 20px;text-align: left; color: #bfbfbf;">Title</p>
+                                </div>
+                                <div style="width: 94%; height: 70%; margin: 10px; background-color: #343434; border-radius: 10px;" >
+                                    <p style="padding: 10px; color: #7e7e7e;">Description</p>
+                                </div>
+                        </div>
+
+                        <div style="margin-left: 1.5%;" class="box">
+                                                                <div style="margin-left: 4%; display: flex; align-items: left;" class="title">
+                                    <p style="font-size: 20px;text-align: left; color: #bfbfbf;">Title</p>
+                                </div>
+                                <div style="width: 94%; height: 70%; margin: 10px; background-color: #343434; border-radius: 10px;" >
+                                    <p style="padding: 10px; color: #7e7e7e;">Description</p>
+                                </div>
+                        </div>
+
+                        <div style="margin-left: 1.5%;" class="box">
+                                                                <div style="margin-left: 4%; display: flex; align-items: left;" class="title">
+                                    <p style="font-size: 20px;text-align: left; color: #bfbfbf;">Title</p>
+                                </div>
+                                <div style="width: 94%; height: 70%; margin: 10px; background-color: #343434; border-radius: 10px;" >
+                                    <p style="padding: 10px; color: #7e7e7e;">Description</p>
+                                </div>
+                        </div>
+
+                        <div style="margin-left: 1.5%; margin-right: 5%;" class="box">
+                                                                <div style="margin-left: 4%; display: flex; align-items: left;" class="title">
+                                    <p style="font-size: 20px;text-align: left; color: #bfbfbf;">Title</p>
+                                </div>
+                                <div style="width: 94%; height: 70%; margin: 10px; background-color: #343434; border-radius: 10px;" >
+                                    <p style="padding: 10px; color: #7e7e7e;">Description</p>
+                                </div>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+            </div>
+    
+    
+            <div class="block" style="background-color: #1B1B1B; background-image: url(background_market.png); background-size: cover; background-position: center center;" onwheel="scrollHandler(event)">
+                
+                <div style="width: 100%; height: 100%;">
+                    <div style="margin-left: 2%; margin-top: 4%; color: #FFF;">
+                        <h1>Facts</h1>    
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center; margin-top: 5%;" class="container">
+                        <div style="margin-left: 5%; display: flex; align-items: center; flex-direction: column;" class="box1">
+                            <div style=" display: flex;align-items: center; justify-content: center; padding: 10px; margin-top: 20px;">
+                                <img style="width: 180px; height: 180px;" src="Res\Facts\rating.png" alt="">
+                            </div>
+                            <div style="width: 88%; height: 30%; margin-top: 20px; border-radius: 10px; background-color: #343434; display: flex; align-items: center; justify-content: center;">
+                                    <p style="color: #7e7e7e; padding: 20px;"><strong>Over 30</strong> happy clients from my past 8 years of service.</p>
+                            </div>
+                            
+                        </div>
+                        <div style="margin-left: 3%;" class="box1">
+                            <div style=" display: flex;align-items: center; justify-content: center; padding: 10px; margin-top: 20px;">
+                                <img style="width: 180px; height: 180px;" src="Res\Facts\completed-task.png" alt="">
+                            </div>
+                            <div style="width: 88%; height: 30%; margin-top: 20px; border-radius: 10px; background-color: #343434; display: flex; align-items: center; justify-content: center;">
+                                <p style="color: #7e7e7e; padding: 20px;"><strong>Completed Over 20</strong> throughout my career.</p>
+                        </div>
+
+
+                        </div>
+                        <div style="margin-left: 3%;" class="box1">
+                            <div style=" display: flex;align-items: center; justify-content: center; padding: 10px; margin-top: 20px;">
+                                <img style="width: 180px; height: 180px;" src="Res\Facts\24-hours.png" alt="">
+                            </div>  
+                            <div style="width: 88%; height: 30%; margin-top: 20px; border-radius: 10px; background-color: #343434; display: flex; align-items: center; justify-content: center;">
+                                <p style="color: #7e7e7e; padding: 20px;"><strong>Over 1000 hours</strong> of support</p>
+                        </div>  
+
+
+
+                        </div>
+                        <div style="margin-left: 3%; margin-right: 5%;" class="box1">
+                            <div style=" display: flex;align-items: center; justify-content: center; padding: 10px; margin-top: 20px;">
+                                <img style="width: 180px; height: 180px;" src="Res\Facts\hard-work.png" alt="">
+                            </div>   
+                            <div style="width: 88%; height: 30%; margin-top: 20px; border-radius: 10px; background-color: #343434; display: flex; align-items: center; justify-content: center;">
+                                <p style="color: #7e7e7e; padding: 20px;"><strong>Multitasking and handling the team</strong> through tough situations </p>
+                        </div> 
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    
+    
+            <div class="block" style="background-color: #1B1B1B; background-image: url(background_assistify.png); background-size: cover; background-position: center center;" onwheel="scrollHandler(event)">
+
+                <div style="width: 100%; height: 100%;">
+                    <div style="margin-left: 2%; margin-top: 4%; color: #FFF;">
+                        <h1>Testimonials</h1>    
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center; margin-top: 5%;" class="container">
+                        <div style="margin-left: 4%; display: flex; flex-direction: column; align-items: center;" class="box1">
+                                
+                                <div style=" display: flex;align-items: center; justify-content: center; padding: 10px; margin-top: 20px; ">
+                                    <img style="width: 180px; height: 180px; border-radius: 100%;" src="Res\Pics\358155044_985347509443007_3636678549161828133_n.jpg" alt="">
+                                </div>
+                                <div>
+                                    <p style="color: #bfbfbf;"><strong>Ganesh Thyadi</strong></p>
+                                </div>
+                                <div style="width: 88%; height: 30%; border-radius: 10px; background-color: #343434; display: flex; align-items: center; justify-content: center;">
+                                        <p style="color: #7e7e7e; padding: 20px;"> "Ronalyn is a <strong>Good Programmer"</strong> </p>
+                                </div>
+
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div style="display: flex; align-items: center; justify-content: center; margin-left: 3%; flex-direction: column;" class="box1">
+                                <div style=" display: flex;align-items: center; justify-content: center; padding: 10px; margin-top: 20px; ">
+                                    <img style="width: 180px; height: 180px; border-radius: 100%;" src="Res\Pics\358155044_985347509443007_3636678549161828133_n.jpg" alt="">
+                                </div>
+                                <div>
+                                    <p style="color: #bfbfbf;"><strong>Ganesh Thyadi</strong></p>
+                                </div>
+                                <div style="width: 88%; height: 30%; border-radius: 10px; background-color: #343434; display: flex; align-items: center; justify-content: center;">
+                                        <p style="color: #7e7e7e; padding: 20px;"> "Ronalyn is a <strong>Good Programmer"</strong> </p>
+                                </div>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div style="display: flex; align-items: center; justify-content: center; margin-left: 3%; flex-direction: column;" class="box1">
+                                    <div style=" display: flex;align-items: center; justify-content: center; padding: 10px; margin-top: 20px; ">
+                                    <img style="width: 180px; height: 180px; border-radius: 100%;" src="Res\Pics\358155044_985347509443007_3636678549161828133_n.jpg" alt="">
+                                </div>
+                                <div>
+                                    <p style="color: #bfbfbf;"><strong>Ganesh Thyadi</strong></p>
+                                </div>
+                                <div style="width: 88%; height: 30%; border-radius: 10px; background-color: #343434; display: flex; align-items: center; justify-content: center;">
+                                        <p style="color: #7e7e7e; padding: 20px;"> "Ronalyn is a <strong>Good Programmer"</strong> </p>
+                                </div>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div style="display: flex; align-items: center; justify-content: center; flex-direction: column; margin-left: 3%; margin-right: 4%;" class="box1">
+                                    <div style=" display: flex;align-items: center; justify-content: center; padding: 10px; margin-top: 20px; ">
+                                    <img style="width: 180px; height: 180px; border-radius: 100%;" src="Res\Pics\358155044_985347509443007_3636678549161828133_n.jpg" alt="">
+                                </div>
+                                <div>
+                                    <p style="color: #bfbfbf;"><strong>Ganesh Thyadi</strong></p>
+                                </div>
+                                <div style="width: 88%; height: 30%; border-radius: 10px; background-color: #343434; display: flex; align-items: center; justify-content: center;">
+                                        <p style="color: #7e7e7e; padding: 20px;"> "Ronalyn is a <strong>Good Programmer"</strong> </p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+    
+            <!-- <div class="block" style="background-color: #1B1B1B; background-image: url(background_mini_projects.png); background-size: cover; background-position: center center;" onwheel="scrollHandler(event)">
+
+            </div>
+    
+            
+            <div class="block" style="background-color: #1B1B1B; background-image: url(background_accomplishments.png); background-size: cover; background-position: center center;" onwheel="scrollHandler(event)">
+
+            </div> -->
+    
+    
+    </div>
+
+    <script>
+
+
+        function scrollHandler(event) {
+            let currentY;
+
+            if (event.type === 'wheel') {
+                currentY = event.deltaY;
+            } else if (event.type === 'touchmove') {
+                currentY = event.touches[0].clientY;
+            }
+
+            const deltaThreshold = 50; // Adjust this threshold as needed
+
+            if (Math.abs(currentY) >= deltaThreshold) {
+                const delta = currentY > 0 ? -1 : 1;
+                const blocks = document.querySelectorAll('.block');
+                const currentBlock = Math.round(window.scrollY / window.innerHeight);
+                const nextBlock = currentBlock + delta;
+                const blockCount = blocks.length;
+
+                if (nextBlock >= 0 && nextBlock < blockCount) {
+                    event.preventDefault();
+                    blocks[nextBlock].scrollIntoView({ behavior: 'smooth' });
+                    setActiveDot(nextBlock);
+                }
+            }
+        }
+
+        function setActiveDot(index) {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function scrollToBlock(index) {
+            const blocks = document.querySelectorAll('.block');
+            blocks[index].scrollIntoView({ behavior: 'smooth' });
+            setActiveDot(index);
+        }
+    </script>
+
+    <script>
+    let touchStartY = 0;
+    let touchEndY = 0;
+
+    document.addEventListener('touchstart', (event) => {
+        touchStartY = event.touches[0].clientY;
+    });
+
+    document.addEventListener('touchmove', (event) => {
+        touchEndY = event.touches[0].clientY;
+    });
+
+    document.addEventListener('touchend', () => {
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const deltaY = touchEndY - touchStartY;
+        const deltaThreshold = 50; // Adjust this threshold as needed
+
+        if (Math.abs(deltaY) >= deltaThreshold) {
+            const delta = deltaY > 0 ? -1 : 1;
+            const blocks = document.querySelectorAll('.block');
+            const currentBlock = Math.round(window.scrollY / window.innerHeight);
+            let nextBlock = currentBlock - delta;
+
+            if (nextBlock >= 0 && nextBlock < blocks.length) {
+                blocks[nextBlock].scrollIntoView({ behavior: 'smooth' });
+                setActiveDot(nextBlock);
+            } else {
+                if (delta === -1) {
+                    blocks[0].scrollIntoView({ behavior: 'smooth' });
+                    setActiveDot(0);
+                } else {
+                    blocks[blocks.length - 1].scrollIntoView({ behavior: 'smooth' });
+                    setActiveDot(blocks.length - 1);
+                }
+            }
+        }
+    }
+
+
+    function openLink(url) {
+        
+        window.location.href = 'index.html';
+    }
+
+
+    </script>
+</body>
+</html>
